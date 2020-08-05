@@ -79,7 +79,9 @@
          - 2.2. run a command:  'aws route53domains accept-domain-transfer-from-another-aws-account --domain-name <your_target_domain --password <given_password> --profile <your_api_user>'
             * USE 'us-east-1' as region otherwise you get an error (i.e., see bugs#1) - you might specify '--region' in above command or change config setting for your profile
             * password: use the one given from 1.3
-         - 2.3. done
+         - 2.3. go to target domain page in route53 console of your dest account
+            - 2.3.1. change nameserver values to the one in newly created hosted zone (3.1.1 so you can do this later after 3.1.1)
+            - 2.3.1. (if necessary) if src account and dest account have different contact info, change it to the one of dest account
       3. migrate 'Hosted zones' for transferred domain (reference: https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zones-migrating.html)
          - 3.1. you can achieve this by using the console or command line
             - 3.1.1. create a new public hosted zone with target domain (need to add the domain manually)
