@@ -97,7 +97,9 @@
             * in order to avoid the downtime of your app, first, lower TTL for both and wait for those TTLs to expires. after two days, you can remove old hosted zones. this time, it won't take 2 days to apply your modification since lowered TTLs
             - 3.1.4. make sure that requests go to the new hosted zones in dest account
             - 3.1.5. change the TTL for the NS record back to higher value. (e.g., 172800 sec: 2days)
-            
+
+## Email Service Setup
+
 
 ## bugs/trouble shootings
   1. aws cli: aws route53domains ...
